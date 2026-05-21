@@ -31,7 +31,8 @@ h1 {
     cursor: pointer;
 }
 
-.day:hover, .day:hover h3 {
+.day:hover,
+.day:hover h3 {
     background-color: #15132e;
 }
 
@@ -44,7 +45,8 @@ h1 {
     right: 0;
 }
 
-.currentDay, .currentDay:hover{
+.currentDay,
+.currentDay:hover {
     background-color: #FFC0CB;
 }
 
@@ -74,7 +76,38 @@ form {
     display: inline;
 }
 
+input {
+    width: 130px;
+    height: 36px;
+    color: #EBEBEB;
+    background-color: #0e0d21;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
 #newMeetingDay {
     display: inline-block;
-    min-height: 24px;
+    min-height: 36px;
+}
+
+form button {
+    cursor: pointer;
+    background-color: #7A408A;
+    color: #EBEBEB;
+    border: none;
+    border-radius: 5px;
+    width: 130px;
+    height: 36px;
+    padding: 10px;
+}
+
+#newMeetingName {
+    width: 200px;
+}
+
+#newMeetingTime::-webkit-calendar-picker-indicator {
+    background-color: #7A408A;
+    border-radius: 50%;
+    cursor: pointer;
 }
