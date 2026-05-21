@@ -15,6 +15,7 @@
 h1 {
     font-size: 4em;
     font-weight: 900;
+    margin-bottom: 20px;
 }
 
 /* Griglia calendario*/
@@ -51,7 +52,29 @@ h1 {
     color: red;
 }
 
+/* Impegni */
+
 h2 {
     font-size: 36px;
     font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-bottom: 20px;
+}
+
+#addMeeting div {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 50px;
+}
+
+form {
+    display: inline;
+}
+
+#newMeetingDay {
+    display: inline-block;
+    min-height: 24px;
 }
