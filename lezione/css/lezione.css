@@ -6,3 +6,13 @@
     background-color: #131334;
     color: #EBEBEB;
 }
+
+.container {
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 900;
+}
