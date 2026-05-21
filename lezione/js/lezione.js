@@ -29,9 +29,19 @@ const dayNames = [
 
 // Scriviamo il nome del mese
 const printCurrentMonth = () => {
-   const title = document.querySelector('h1');
-   const currentMonth = monthNames[getMonth];
-   title.textContent = currentMonth;
+    const title = document.querySelector('h1');
+    const currentMonth = monthNames[getMonth];
+    title.textContent = currentMonth;
 }
 
 printCurrentMonth();
+
+const dayInMonth = () => {
+    const lastDay = new Date(getYear, getMonth + 1, 0);
+    // Perchè il giorno zero, del mese +1 all'attuale (giugno) è l'ultimo di maggio
+    const numberOfDays = lastDay.getDate();
+    return numberOfDays;
+    // ora so quanti giorni ha il mese attuale
+};
+
+dayInMonth();
