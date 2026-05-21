@@ -2,8 +2,6 @@ const now = new Date();
 const getYear = now.getFullYear();
 const getMonth = now.getMonth();
 
-console.log(now);
-
 const monthNames = [
     'Gennaio',
     'Febbraio',
@@ -28,3 +26,12 @@ const dayNames = [
     'Venerdì',
     'Sabato'
 ];
+
+// Scriviamo il nome del mese
+const printCurrentMonth = () => {
+   const title = document.querySelector('h1');
+   const currentMonth = monthNames[getMonth];
+   title.textContent = currentMonth;
+}
+
+printCurrentMonth();
