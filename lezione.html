@@ -8,19 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel = "icon" href="lezione/img/calendar.png">
+    <link rel="icon" href="lezione/img/calendar.png">
     <link rel="stylesheet" href="lezione/css/lezione.css">
 </head>
 
 <body>
- <div class="container">
-    <main>
-        <!-- nome del mese-->
-        <h1></h1>
-        <!-- griglia calendario-->
-         <div id="calendar"></div>
-    </main>
- </div>
+    <div class="container">
+        <main>
+            <!-- nome del mese-->
+            <h1></h1>
+            <!-- griglia calendario-->
+            <div id="calendar"></div>
+            <!-- Impegni -->
+            <h2>Add meeting</h2>
+            <!-- Form orizzontale -->
+            <div id="addMeeting">
+                <div>
+                    <h4>Meeting Day</h4>
+                    <span id="newMeetingDay"></span>
+                </div>
+                <form>
+                    <div>
+                        <h4>Meeting Time</h4>
+                        <input></input>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
 
     <script src="lezione/js/lezione.js"></script>
 </body>

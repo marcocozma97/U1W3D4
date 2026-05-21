@@ -43,10 +43,15 @@ h1 {
     right: 0;
 }
 
-.currentDay {
+.currentDay, .currentDay:hover{
     background-color: #FFC0CB;
 }
 
 .sunday {
     color: red;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
 }
