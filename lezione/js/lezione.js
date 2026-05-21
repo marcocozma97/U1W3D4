@@ -1,6 +1,7 @@
 const now = new Date();
 const getYear = now.getFullYear();
 const getMonth = now.getMonth();
+const appointments = []; // conterrà gli appuntamenti già inseriti
 
 const monthNames = [
     'Gennaio',
@@ -52,11 +53,16 @@ const createDays = (daysNumber) => {
         const dayCellDiv = document.createElement('div');
         dayCellDiv.classList.add('day');
         // Le celle dovranno esssere cliccabili
-
         dayCellDiv.addEventListener('click', function () {
             unselectAllDays(); // deselezionare il giorno selezionato prima
             dayCellDiv.classList.add('selected');
             changeMeetingDay(i);
+            if (appointments[i] && appointments[i].length > 0) {
+                showAppointments(i);
+            } else {
+                const appointmentsDiv = document.querySelector('appointments');
+                appointmentsDiv.style.display = 'none';
+            }
 
         })
 
