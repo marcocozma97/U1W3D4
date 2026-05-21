@@ -16,3 +16,37 @@ h1 {
     font-size: 4em;
     font-weight: 900;
 }
+
+/* Griglia calendario*/
+
+.day {
+    display: inline-block;
+    width: 14%;
+    height: 130px;
+    /* per poter posizionare al centro ho bisogno del position*/
+    position: relative;
+    border: 1px solid #0d6f83;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.day:hover, .day:hover h3 {
+    background-color: #15132e;
+}
+
+.day h3 {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+}
+
+.currentDay {
+    background-color: #FFC0CB;
+}
+
+.sunday {
+    color: red;
+}

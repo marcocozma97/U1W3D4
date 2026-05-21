@@ -44,4 +44,36 @@ const dayInMonth = () => {
     // ora so quanti giorni ha il mese attuale
 };
 
-dayInMonth();
+// Creiamo la griglia
+
+const createDays = (daysNumber) => {
+    const calendarDiv = document.querySelector('#calendar');
+    for (let i = 1; i <= daysNumber; i++) {
+        const dayCellDiv = document.createElement('div');
+        dayCellDiv.classList.add('day');
+        // Le celle dovranno esssere cliccabili - DA FARE
+        
+        // Creiamo il  giorno
+        const cellValue = document.createElement('h3');
+        const thisDate = i;
+        // Evidenziamo il giorno corrente
+        if (thisDate === now.getDate()) {
+            dayCellDiv.classList.add('currentDay');
+        }
+
+        // Scriviamo le domeniche in rosso
+        let thisDay = new Date(getYear, getMonth, thisDate);
+        if (thisDay.getDay() === 0) {
+            cellValue.classList.add('sunday');
+        }
+
+        // Scriviamo il nome del giorno
+        let dayNumber = thisDay.getDay();
+        let dayName = dayNames[dayNumber];
+        cellValue.textContent = `${dayName} ${i}`;
+        dayCellDiv.appendChild(cellValue);
+        calendarDiv.appendChild(dayCellDiv);
+    }
+};
+
+createDays(dayInMonth());
